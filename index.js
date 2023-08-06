@@ -1,8 +1,11 @@
 const express = require('express');
 const Joi = require('joi');
 const app = express();
+const logger = require('./logger')
 
+// app.use(logger);
 app.use(express.json());
+app.use(express.static('public'));
 
 const products = [
   { id: 1, name: "Keychain" },
