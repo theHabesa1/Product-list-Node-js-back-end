@@ -3,6 +3,10 @@ const Joi = require('joi');
 const app = express();
 const logger = require('./logger')
 
+app.set("view engine","pug")
+app.set('views', './views')
+
+
 // app.use(logger);
 app.use(express.json());
 app.use(express.static('public'));
@@ -22,7 +26,7 @@ const idParamSchema = Joi.object({
 });
 
 app.get('/api/v1/products', (req, res) => {
-  res.send(products);
+  res.render('index',{title:"My express app", message:"Hello"});
 });
 
 app.post('/api/v1/products', (req, res) => {
