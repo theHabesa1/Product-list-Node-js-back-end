@@ -2,8 +2,6 @@ const express = require('express');
 const Joi = require('joi');
 const app = express();
 const logger = require('./logger')
-const product = require('./routes/products')
-
 
 app.set("view engine","pug")
 app.set('views', './views')
