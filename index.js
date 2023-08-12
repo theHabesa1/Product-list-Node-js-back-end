@@ -16,6 +16,7 @@ const products = [
   { id: 2, name: "Puzzle" },
   { id: 3, name: "Laptop stands" },
   { id: 4, name: "phone stands" },
+  { id: 5, name: "pod stands" },
 ];
 
 app.get('/api/v1/products', (req, res) => {
